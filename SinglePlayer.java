@@ -6,16 +6,16 @@ public class SinglePlayer {
         
         
         if (dif == 1){
-            Easy.setEasy();
-            Easy.randomQuestions();
+            EasyQuestions.setEasyQuestions();
+            EasyQuestions.randomQuestions();
         } else if (dif == 2){
-            Medium.setMedium();
-            Medium.randomQuestions();
+            MediumQuestions.setMediumQuestions();
+            MediumQuestions.randomQuestions();
         } else if (dif == 3){
-            Hard.setHard();
-            Hard.randomQuestions();
+            HardQuestions.setHardQuestions();
+            HardQuestions.randomQuestions();
         } else {
-            Mixed.randomQuestions();
+            MixedQuestions.randomQuestions();
         }
         
         for (i=0 ; i<10 ; i++) {
