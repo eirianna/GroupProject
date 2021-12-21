@@ -2,24 +2,26 @@ import java.util.Scanner;
 
 public class SinglePlayer {
     
+    ArrayList<ArrayList<String>> QnA = new ArrayList<>();
+    
     public static void questions {
         
         
         if (dif == 1){
             EasyQuestions.setEasyQuestions();
-            EasyQuestions.randomQuestions();
+            QnA = EasyQuestions.randomQuestions();
         } else if (dif == 2){
             MediumQuestions.setMediumQuestions();
-            MediumQuestions.randomQuestions();
+            QnA = MediumQuestions.randomQuestions();
         } else if (dif == 3){
             HardQuestions.setHardQuestions();
-            HardQuestions.randomQuestions();
+            QnA = HardQuestions.randomQuestions();
         } else {
-            MixedQuestions.randomQuestions();
+            QnA = MixedQuestions.randomQuestions();
         }
         
         for (i=0 ; i<10 ; i++) {
-            System.out.println(A[i,0]);
+            System.out.println(QnA[i,0]);
             String answer;
             do {
                 answer = sc.nextString();
@@ -28,10 +30,10 @@ public class SinglePlayer {
                 }
             } while (answer<>"1" && answer<>"2" && answer<>"3" && answer<>"4" && answer<>"q")
             
-            if (answer == A[i,1]) {
+            if (answer == QnA[i,1]) {
                 System.out.println("CORRECT ANSWER!");
                 //Points
-            } else if (answer <> A[i,1]) {
+            } else if (answer <> QnA[i,1]) {
                 System.out.println("WRONG ANSWER...");
             } else {
                 System.exit(0);
