@@ -140,7 +140,7 @@ public class HardQuestions {
      public static String[][] randomQuestions() {
         Random randomNumber = new Random();
         int cn;
-        String[][] easyArray = new String[10][2];
+        String[][] hardArray = new String[10][2];
         int[] controlArray = new int[20];
         for (int i = 0; i < 20; i++) {
             controlArray[i] = -1;
