@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class EasyQuestions {
+public class HardQuestions {
     private static String[] hardQuestions = new String[20];
     private static String[] hardAnswers = new String[20];
     public static String[] getHardQuestions() {
@@ -136,18 +136,27 @@ public class EasyQuestions {
         hardAnswers[18] = "α";
         hardAnswers[19] = "β";
     }
-    public static String randomQuestions() {
+
+     public static String[][] randomQuestions() {
         Random randomNumber = new Random();
         int cn;
-        String[][] hardArray = new String[2][10];
-        //η μέθοδος αυτή θα καλείται στην SinglePlayer με την εντολή HardQuestions.randomQuestions();
-        for (int i=0;i<10;i++) {
-            cn = randomNumber.nextInt(20); //cn = chosen number [ο αριθμός που έγινε random generated (0-19) + 1]
-            String cq = hardQuestions[cn]; //cq = chosen question 
-            String ra = hardAnswers[cn]; //ra = right answer
-            hardArray[0][i] = cq;
-            hardArray[1][i] = ra;
+        String[][] easyArray = new String[10][2];
+        int[] controlArray = new int[20];
+        for (int i = 0; i < 20; i++) {
+            controlArray[i] = -1;
         }
-        return hardArray[2][10];
+        //η μέθοδος αυτή θα καλείται στην SinglePlayer με την εντολή HardQuestions.randomQuestions();
+        for (int i = 0; i < 10; i++) {
+            do {
+                cn = randomNumber.nextInt(20); //cn = chosen number [ο αριθμός που έγινε random generated (0-19)]
+            } while (controlArray[cn] == cn);
+
+            controlArray[cn] = cn;
+            String cq = hardQuestions[cn]; //cq = chosen question
+            String ra = hardAnswers[cn]; //ra = right answer
+            hardArray[i][0] = cq;
+            hardArray[i][1] = ra;
+        }
+        return hardArray;
     }
 }
