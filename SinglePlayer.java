@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class SinglePlayer {
     
-    public static void Questions {
+    public static void questions {
         
         
         if (dif == 1){
