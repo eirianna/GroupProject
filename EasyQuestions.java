@@ -137,18 +137,26 @@ public class EasyQuestions {
         easyAnswers[18]="δ";
         easyAnswers[19]="β";
     }
-    public static String randomQuestions() {
+  public static String[][] randomQuestions() {
         Random randomNumber = new Random();
         int cn;
-        String[][] easyArray = new String[2][10];
-        //η μέθοδος αυτή θα καλείται στην SinglePlayer με την εντολή EasyQuestions.randomQuestions();
-        for (int i=0;i<10;i++) {
-            cn = randomNumber.nextInt(20); //cn = chosen number [ο αριθμός που έγινε random generated (0-19) + 1]
-            String cq = easyQuestions[cn]; //cq = chosen question 
-            String ra = easyAnswers[cn]; //ra = right answer
-            easyArray[0][i] = cq;
-            easyArray[1][i] = ra;
+        String[][] easyArray = new String[10][2];
+        int[] controlArray = new int[20];
+        for (int i = 0; i < 20; i++) {
+            controlArray[i] = -1;
         }
-        return easyArray[2][10];
+        //η μέθοδος αυτή θα καλείται στην SinglePlayer με την εντολή EasyQuestions.randomQuestions();
+        for (int i = 0; i < 10; i++) {
+            do {
+                cn = randomNumber.nextInt(20); //cn = chosen number [ο αριθμός που έγινε random generated (0-19)]
+            } while (controlArray[cn] == cn);
+
+            controlArray[cn] = cn;
+            String cq = easyQuestions[cn]; //cq = chosen question
+            String ra = easyAnswers[cn]; //ra = right answer
+            easyArray[i][0] = cq;
+            easyArray[i][1] = ra;
+        }
+        return easyArray;
     }
 }
