@@ -108,7 +108,7 @@ public class MediumQuestions {
         "γ. 6\n" +
         "δ. 3\n";
     }
-    private static String[] medans = new String[20];
+    private static String[] mediumAnswers = new String[20];
     public static String[] getMediumAnswers() {
         return mediumAnswers;
     }
@@ -134,18 +134,27 @@ public class MediumQuestions {
         mediumAnswers[18] = "α";
         mediumAnswers[19] = "δ";
     }
-    public static String randomQuestions() {
+    
+    public static String[][] randomQuestions() {
         Random randomNumber = new Random();
         int cn;
-        String[][] mediumArray = new String[2][10];
-        //η μέθοδος αυτή θα καλείται στην SinglePlayer με την εντολή MediumQuestions.randomQuestions();
-        for (int i=0;i<10;i++) {
-            cn = randomNumber.nextInt(20); //cn = chosen number [ο αριθμός που έγινε random generated (0-19) + 1]
-            String cq = mediumQuestions[cn]; //cq = chosen question 
-            String ra = mediumAnswers[cn]; //ra = right answer
-            mediumArray[0][i] = cq;
-            mediumArray[1][i] = ra;
+        String[][] MediumArray = new String[10][2];
+        int[] controlArray = new int[20];
+        for (int i = 0; i < 20; i++) {
+            controlArray[i] = -1;
         }
-        return mediumArray[2][10];
+        //η μέθοδος αυτή θα καλείται στην SinglePlayer με την εντολή MediumQuestions.randomQuestions();
+        for (int i = 0; i < 10; i++) {
+            do {
+                cn = randomNumber.nextInt(20); //cn = chosen number [ο αριθμός που έγινε random generated (0-19)]
+            } while (controlArray[cn] == cn);
+
+            controlArray[cn] = cn;
+            String cq = mediumQuestions[cn]; //cq = chosen question
+            String ra = mediumAnswers[cn]; //ra = right answer
+            MediumArray[i][0] = cq;
+            MediumArray[i][1] = ra;
+        }
+        return MediumArray;
     }
 }
