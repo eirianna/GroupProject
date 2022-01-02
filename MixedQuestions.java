@@ -43,6 +43,6 @@ public class MixedQuestions {
             mixedArray[i][0] = cq;
             mixedArray[i][1] = ra;
         }
-        return mixedArray[2][20];
+        return mixedArray[20][2];
     }
 }
