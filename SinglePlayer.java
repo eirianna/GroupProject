@@ -4,7 +4,7 @@ public class SinglePlayer {
     
     ArrayList<ArrayList<String>> QnA = new ArrayList<>();
     
-    public static void questions {
+    public static void questions() {
         
         
         if (dif == 1){
@@ -20,7 +20,7 @@ public class SinglePlayer {
             QnA = MixedQuestions.randomQuestions();
         }
         
-        for (i=0 ; i<10 ; i++) {
+        for (int i=0 ; i<10 ; i++) {
             System.out.println(QnA[i,0]);
             String answer;
             do {
