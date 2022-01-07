@@ -16,18 +16,17 @@ public class DeTrivial
 	        }
 	   } while (choice <1 || choice>3 )     
 	    
-	   if (choice == 1) {		/* If choice is 1, the game asks for the diffuculty level and the number of players */ 
+	   if (choice == 1) {
 	       Welcome.level();
 	       Welcome.players();
-	   } else if (choice == 2) {
+	   } else if (choice == 2) {		/*if choice = 2 the game shows its instructions*/
 	       instructions();
 	   } else {
-	       System.exit(0);
+	       System.exit(0);			/*if choice = 3 the game is cancelled*/
 	   }
 	    
 	}
 	
-	/* The instructions of the game */
 	public static void instructions() {
 	  System.out.println("Το παιχνίδι αποτελείται από ένα σύνολο 60 ερωτήσεων που αφορούν την\n" +
                 "ελληνική ιστορία, μυθολογία, γεωγραφία και πολιτισμό. Χωρίζεται σε 4\n" +
