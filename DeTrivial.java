@@ -10,7 +10,7 @@ public class DeTrivial
         Scanner sc = new Scanner(System.in);
 	    
 	    do {
-	        int choice = sc.nextInt; /* The choice of the player */
+	        int choice = sc.nextInt(); /* The choice of the player */
 	        if (choice <1 || choice>3) {
 	            System.out.println("Invalid option. Please try again.");
 	        }
