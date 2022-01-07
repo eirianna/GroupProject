@@ -16,13 +16,13 @@ public class DeTrivial
 	        }
 	   } while (choice <1 || choice>3 )     
 	    
-	   if (choice == 1) {			/* if choice = 1 the game asks for its difficulty level and the number of players */
+	   if (choice == 1) {
 	       Welcome.level();
 	       Welcome.players();
-	   } else if (choice == 2) {		/*if choice = 2 the game shows its instructions*/
+	   } else if (choice == 2) {		/*if choice = 2, the game shows its instructions*/
 	       instructions();
 	   } else {
-	       System.exit(0);			/*if choice = 3 the game is cancelled*/
+	       System.exit(0);			/*if choice = 3, the player(s) exits the game*/
 	   }
 	    
 	}
