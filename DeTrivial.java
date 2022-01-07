@@ -27,6 +27,7 @@ public class DeTrivial
 	    
 	}
 	
+	/* The instructions of the game */
 	public static void instructions() {
 	  System.out.println("Το παιχνίδι αποτελείται από ένα σύνολο 60 ερωτήσεων που αφορούν την\n" +
                 "ελληνική ιστορία, μυθολογία, γεωγραφία και πολιτισμό. Χωρίζεται σε 4\n" +
