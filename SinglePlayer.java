@@ -26,7 +26,7 @@ public class SinglePlayer {
             String answer;
             do {
                 answer = sc.nextString();
-                if (answer<>"α" && answer<>"β" && answer<>"γ" && answer<>"δ" && answer<>"q"){
+                if (answer<>"α" && answer<>"β" && answer<>"γ" && answer<>"δ" && answer<>"q"){       /* If answer is not one of these options, the game asks the player asks the player to answer again */
                     System.out.println("Invalid option. Please try again.")
                 }
             } while (answer<>"α" && answer<>"β" && answer<>"γ" && answer<>"δ" && answer<>"q")
@@ -37,7 +37,7 @@ public class SinglePlayer {
             } else if (answer <> QnA[i,1]) {
                 System.out.println("WRONG ANSWER...");
             } else {
-                System.exit(0);
+                System.exit(0);     /* This is the case where the player has chosen q, so the game exits */
             }
         }
         
