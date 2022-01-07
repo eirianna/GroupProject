@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class DeTrivial
 {
-    public int numb;
+    public int numb; // numb = number of players chosen
     public int dif;
 	
 	public static void main(String[] args) {
