@@ -6,24 +6,24 @@ public class MixedQuestions {
     
     public static String randomQuestions() {
         
-        String [] mixedQE = new String[60];
-        String [] mixedAN = new String[60];
+        String [] mixedQE = new String[60];             //πινακας με ολες τις ερωτησεις
+        String [] mixedAN = new String[60];             //πινακας με ολες τις απαντησεις
         
-        EasyQuestions.setEasyQuestions;
+        EasyQuestions.setEasyQuestions;                 //setting ολες τις ερωτησεις
         MediumQuestions.setMediumQuestions;
         HardQuestions.setHardQuestions;
-        mixedQE = EasyQuestions.getEasyQuestions;
+        mixedQE = EasyQuestions.getEasyQuestions;           //getting ολες τις ερωτησεις και βαζουμε στον πινακα 
         mixedQE = MediumQuestions.getMediumQuestions;
         mixedQE = HardQuestions.getHardQuestions;
         
-        EasyQuestions.setEasyAnswers;
+        EasyQuestions.setEasyAnswers;                       //ομοια για απαντησεις
         MediumQuestions.setMediumAnswers;
         HardQuestions.setHardAnswers;
         mixedAN = EasyQuestions.getEasyAnswers;
         mixedAN = MediumQuestions.getMediumAnswers;
         mixedAN = HardQuestions.getHardAnswers;
         
-        Random randomNumber = new Random();
+        Random randomNumber = new Random();                 //δημιουργια πίνακα που καλείται από SinglePlayer και MultiPlayer
         int cn;
         String[][] mixedArray = new String[20][2];
         int[] controlArray = new int[60];
