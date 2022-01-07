@@ -8,16 +8,16 @@ public class SinglePlayer {
     public static void questions() {
         
         
-        if (dif == 1){
+        if (dif == 1){               /* If the input is 1, the EasyQuestions class is called */
             EasyQuestions.setEasyQuestions();
             QnA = EasyQuestions.randomQuestions();
-        } else if (dif == 2){
+        } else if (dif == 2){       /* If the input is 2, the EasyQuestions class is called */
             MediumQuestions.setMediumQuestions();
             QnA = MediumQuestions.randomQuestions();
-        } else if (dif == 3){
+        } else if (dif == 3){       /* If the input is 3, the EasyQuestions class is called */
             HardQuestions.setHardQuestions();
             QnA = HardQuestions.randomQuestions();
-        } else {
+        } else {                    /* If the input is 4 , the MixedQuestions class is called */
             QnA = MixedQuestions.randomQuestions();
         }
         
@@ -26,10 +26,10 @@ public class SinglePlayer {
             String answer;
             do {
                 answer = sc.nextString();
-                if (answer<>"1" && answer<>"2" && answer<>"3" && answer<>"4" && answer<>"q"){
+                if (answer<>"α" && answer<>"β" && answer<>"γ" && answer<>"δ" && answer<>"q"){
                     System.out.println("Invalid option. Please try again.")
                 }
-            } while (answer<>"1" && answer<>"2" && answer<>"3" && answer<>"4" && answer<>"q")
+            } while (answer<>"α" && answer<>"β" && answer<>"γ" && answer<>"δ" && answer<>"q")
             
             if (answer == QnA[i,1]) {
                 System.out.println("CORRECT ANSWER!");
