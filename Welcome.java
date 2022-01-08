@@ -10,12 +10,16 @@ public class Welcome {
     
     public static void players() {
         
-        int numb = Character.getNumericValue(numb1);        /*We turn the char variable numb1 into an int*/
-        System.out.println("Enter number of players (up to 4): ");
-        int numb = input.nextInt();     /* The player inputs the number of players */
-        while (numb < 1 || numb > 4) {
-            System.out.println("Please try again: ");       /* If the player doesn't input a number between 1 and 4, the game asks for the number of players again */
-            numb = input.nextInt();
+        
+        System.out.println("Enter number of players (up to 4), or press 'q' to quit: ");
+        char numb1 = input.nextChar();     /* The player inputs the number of players */
+        if (numb1 == 'q') {
+            System.exit(0);
+        } else {
+            int numb = Character.getNumericValue(numb1);        /*We turn the char variable numb1 into an int*/
+            while (numb < 1 || numb > 4) {
+                System.out.println("Please try again: ");       /* If the player doesn't input a number between 1 and 4, the game asks for the number of players again */
+                numb = input.nextInt();
         }
         
         if (numb==1) {      /* If the input is 1, then the SinglePlayer class is called */
