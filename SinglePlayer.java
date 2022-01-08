@@ -21,7 +21,7 @@ public class SinglePlayer {
             QnA = MixedQuestions.randomQuestions();
         }
         
-        for (int i=0 ; i<10 ; i++) {
+        for (int i=0 ; i<QnA.size ; i++) {
             System.out.println(QnA[i,0]);
             String answer;
             do {
