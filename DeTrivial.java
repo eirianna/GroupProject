@@ -6,7 +6,7 @@ public class DeTrivial
     public char dif1;    /*Variable dif indicates the difficulty of the game*/
 	public static void main(String[] args) {
 	    Welcome.message(); /*Prints a welcoming message*/
-	    System.out.println("START GAME (press 1)"/n "INSTRUCTIONS (press 2)"/n "EXIT GAME (press 3)");
+	    System.out.println("START GAME (press 1)\n" + "INSTRUCTIONS (press 2)\n" + "EXIT GAME (press 3)");
         Scanner sc = new Scanner(System.in);
 	    
 	    do {
