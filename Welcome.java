@@ -10,6 +10,7 @@ public class Welcome {
     
     public static void players() {
         
+        int numb = Character.getNumericValue(numb1);        /*We turn the char variable numb1 into an int*/
         System.out.println("Enter number of players (up to 4): ");
         int numb = input.nextInt();     /* The player inputs the number of players */
         while (numb < 1 || numb > 4) {
