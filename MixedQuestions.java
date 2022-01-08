@@ -9,16 +9,16 @@ public class MixedQuestions {
         String [] mixedQE = new String[60];             //includes all the questions of all levels
         String [] mixedAN = new String[60];             //includes all the answers of all levels
         
-        EasyQuestions.setEasyQuestions;                 //setting every level's questions
-        MediumQuestions.setMediumQuestions;
-        HardQuestions.setHardQuestions;
+        EasyQuestions.setEasyQuestions();                 //setting every level's questions
+        MediumQuestions.setMediumQuestions();
+        HardQuestions.setHardQuestions();
         mixedQE = EasyQuestions.getEasyQuestions;           //filling mixedQE with the questions 
         mixedQE = MediumQuestions.getMediumQuestions;
         mixedQE = HardQuestions.getHardQuestions;
         
-        EasyQuestions.setEasyAnswers;                       //same for answers
-        MediumQuestions.setMediumAnswers;
-        HardQuestions.setHardAnswers;
+        EasyQuestions.setEasyAnswers();                       //same for answers
+        MediumQuestions.setMediumAnswers();
+        HardQuestions.setHardAnswers();
         mixedAN = EasyQuestions.getEasyAnswers;
         mixedAN = MediumQuestions.getMediumAnswers;
         mixedAN = HardQuestions.getHardAnswers;
