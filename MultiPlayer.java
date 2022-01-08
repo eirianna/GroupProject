@@ -35,12 +35,10 @@ public class MultiPlayer {
                     }
                 } while (answer[j] <>"1" && answer[j] <>"2" && answer[j] <>"3" && answer[j] <>"4" && answer[j] <>"q")
 
-                if (answer[j] == QnA[i,1]){
+                if (answer[j] != "q") { 
+                    if (answer[j] == QnA[i,1]){
                     //points
-                    if (j < numb - 1) {
-                        System.out.println("Next player");
                     }
-                } else if (answer[j] <>QnA[i, 1]){
                     if (j < numb - 1) {
                         System.out.println("Next player");
                     }
@@ -48,7 +46,7 @@ public class MultiPlayer {
                     System.exit(0);
                 }
             }
-
+            System.out.println("The correct answer is " + QnA[i,1])
         }
 
     }
