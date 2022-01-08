@@ -36,13 +36,11 @@ public class MultiPlayer {
                 } while (answer[j] <>"1" && answer[j] <>"2" && answer[j] <>"3" && answer[j] <>"4" && answer[j] <>"q")
 
                 if (answer[j] == QnA[i,1]){
-                    System.out.println("CORRECT ANSWER!");
                     //points
                     if (j < numb - 1) {
                         System.out.println("Next player");
                     }
                 } else if (answer[j] <>QnA[i, 1]){
-                    System.out.println("WRONG ANSWER...");
                     if (j < numb - 1) {
                         System.out.println("Next player");
                     }
