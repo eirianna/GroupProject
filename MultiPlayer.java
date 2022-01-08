@@ -25,7 +25,7 @@ public class MultiPlayer {
         for (int k = 0; k < numb; k++) {
             points[k] = 0;
         }
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < QnA.size; i++) {
             System.out.println(QnA[i, 0]);
             for (int j = 0; j < numb; j++) {
                 do {
