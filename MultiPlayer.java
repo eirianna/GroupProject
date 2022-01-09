@@ -22,6 +22,7 @@ public class MultiPlayer {
             QnA = MixedQuestions.randomQuestions();
         }
         
+        int numb = Character.getNumericValue(numb1);
         String answer[] = new String[numb]; 
         
         //array for the sum of the points of each player
