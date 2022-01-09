@@ -20,10 +20,10 @@ public class SinglePlayer {
         } else {                    /* If the input is 4 , the MixedQuestions class is called */
             QnA = MixedQuestions.randomQuestions();
         }
-        
+        int points = 0;
+        String answer;
         for (int i=0 ; i<QnA.size ; i++) {
             System.out.println(QnA[i,0]);
-            String answer;
             do {
                 answer = sc.nextString();
                 if (answer<>"1" && answer<>"2" && answer<>"3" && answer<>"4" && answer<>"q"){       /* If answer is not one of these options, the game asks the player asks the player to answer again */
@@ -33,13 +33,23 @@ public class SinglePlayer {
             
             if (answer == QnA[i,1]) {
                 System.out.println("CORRECT ANSWER!");
-                //Points
+                points = points + 100;
             } else if (answer <> QnA[i,1]) {
                 System.out.println("WRONG ANSWER...");
             } else {
                 System.exit(0);     /* This is the case where the player has chosen q, so the game exits */
             }
         }
-        
-        
+        int realPoints = points / QnA.size;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
+        System.out.println("The game has ended, you gathered %d points!", points);
+            if (realPoints <50) {
+                System.out.println("You can do better than that!");
+            } else if (realPoints <80) {
+                System.out.println("You 've done your research!!!");
+            } else {    
+                System.out.println("Have you ever considered getting a citizenship from Greece?");
+            }
+        System.out.println("The developers' team thanks you for joining us on this cultural journey.");
+        System.out.println("We hope you enjoyed it as much as we did!");
+    }
 }
