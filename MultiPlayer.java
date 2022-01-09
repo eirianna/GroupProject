@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MultiPlayer {
 
@@ -52,13 +53,8 @@ public class MultiPlayer {
             }
             System.out.println("The correct answer is " + QnA[i,1])
         }
-        //ranking the points of each player from highest score to lowest
+        //Sorting array points in descending order
         // mallon tha prepei na exoume k onomata h player#1 kapoia onomasia se pinaka oste na tin taksinomisoume k aftin kai na einai adistixi
         // me tous pontous oste na ine ksekatharo poios ine o nikitis
-        for (int j = 0; j < (numb - 1); j++) {
-            if (point[j] < points[j + 1]) {
-                int temp = point[j];
-                point[j] = point[j-1];
-                point[j-1] = temp;
-            }
+        Arrays.sort(points, Collections.reverseOrder());
     }
