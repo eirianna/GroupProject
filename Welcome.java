@@ -21,6 +21,7 @@ public class Welcome {
                 System.out.println("Please try again: ");       /* If the player doesn't input a number between 1 and 4, the game asks for the number of players again */
                 numb = input.nextInt();
             }
+            numb1 = (char)numb;
         }
         
         if (numb==1) {      /* If the input is 1, then the SinglePlayer class is called */
