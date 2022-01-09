@@ -42,6 +42,7 @@ public class Welcome {
                 System.out.print("Please try again: ");     /* If the player doesn't input a number between 1 and 4, the game asks for the difficulty level again */
                 dif = input.nextInt();
             }
+            dif1 = (char)dif;
         }
     }
 }
