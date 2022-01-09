@@ -7,7 +7,7 @@ public class SinglePlayer {
     
     public static void questions() {
         
-        
+        int dif = Character.getNumericValue(dif1);
         if (dif == 1){               /* If the input is 1, the EasyQuestions class is called */
             EasyQuestions.setEasyQuestions();
             QnA = EasyQuestions.randomQuestions();
