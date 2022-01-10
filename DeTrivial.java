@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-public class DeTrivial
-{
+public class DeTrivial{
     public char numb1;	/* numb = number of players who will play the game*/
     public char dif1;    /*Variable dif indicates the difficulty of the game*/
 	public static void main(String[] args) {
@@ -14,7 +13,7 @@ public class DeTrivial
 	        if (choice <1 || choice>3) {
 	            System.out.println("Invalid option. Please try again.");
 	        }
-	   } while (choice <1 || choice>3 )     
+	   } while (choice <1 || choice>3 );     
 	    
 	   if (choice == 1) {			/*if choice = 1, the game asks for the difficulty level and the number of players*/
 	       Welcome.level();
