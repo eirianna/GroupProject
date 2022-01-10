@@ -14,7 +14,7 @@ public class Welcome {
         System.out.println("Enter number of players (up to 4), or press 'q' to quit: ");
         do {
             System.out.println("Enter number of players (up to 4), or press 'q' to quit: ");
-            numb1 = input.next();     /* The player inputs the number of players */
+            numb1 = input.nextChar();     /* The player inputs the number of players */
             if (numb1 != '1' && numb1 != '2' && numb1 != '3' && numb1 != 4 && numb1 != 'q') {
                 System.out.println("Please try again!");
             }
@@ -34,7 +34,7 @@ public class Welcome {
         do {
             System.out.print("Choose difficulty level, or press 'q' to quit: ");
             System.out.print("1. Easy, 2. Medium, 3. Hard, 4. Mixed");
-            dif1 = input.next();      /* The player inputs the difficulty level */
+            dif1 = input.nextChar();      /* The player inputs the difficulty level */
             if (dif1 != '1' && dif1 != '2' && dif1 != '3' && dif1 != 4 && dif1 != 'q') {
                 System.out.println("Please try again!");
             }
