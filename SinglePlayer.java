@@ -26,10 +26,10 @@ public class SinglePlayer {
             System.out.println(QnA[i,0]);
             do {
                 answer = sc.nextString();
-                if (answer<>"1" && answer<>"2" && answer<>"3" && answer<>"4" && answer<>"q"){       /* If answer is not one of these options, the game asks the player asks the player to answer again */
+                if (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q"){       /* If answer is not one of these options, the game asks the player asks the player to answer again */
                     System.out.println("Invalid option. Please try again.")
                 }
-            } while (answer<>"1" && answer<>"2" && answer<>"3" && answer<>"4" && answer<>"q")
+            } while (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q")
             
             if (answer == QnA[i,1]) {
                 System.out.println("CORRECT ANSWER!");
