@@ -10,7 +10,7 @@ public class MultiPlayer {
     public static void questions() {
 
         int dif = Character.getNumericValue(dif1);
-        if (dif == 1) { //if input is 1 then EasyQuestions class is called
+        if (dif == 1) {          /*if input is 1 then EasyQuestions class is called*/
             EasyQuestions.setEasyQuestions();
             QnA = EasyQuestions.randomQuestions();
         } else if (dif == 2) { //if input is 2 then MediumQuestions class is called
