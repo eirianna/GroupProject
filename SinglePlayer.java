@@ -33,7 +33,7 @@ public class SinglePlayer {
             
             if (answer == "q") {
                 System.exit(0);     /* This is the case where the player has chosen q, so the game exits */
-            } else if (answer == QnA[i,1]) {
+            } else if (answer == QnA[i][1]) {
                 System.out.println("CORRECT ANSWER!");
                 points = points + 100;
             } else {
