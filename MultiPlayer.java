@@ -1,25 +1,25 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Arrays;
 
 public class MultiPlayer {
 
-    static ArrayList<ArrayList<String>> QnA = new ArrayList<>();
-
     public static void questions() {
-
+        
         int dif = Character.getNumericValue(dif1);
-        if (dif == 1) {          /*if input is 1 then EasyQuestions class is called*/
-            EasyQuestions.setEasyQuestions();
-            QnA = EasyQuestions.randomQuestions();
-        } else if (dif == 2) { //if input is 2 then MediumQuestions class is called
-            MediumQuestions.setMediumQuestions();
-            QnA = MediumQuestions.randomQuestions();
-        } else if (dif == 3) { //if input is 3 then HardQuestions class is called
-            HardQuestions.setHardQuestions();
-            QnA = HardQuestions.randomQuestions();
-        } else { // //if input is 4 then MixedQuestions class is called
+        if (dif != 4) {
+            String[][] QnA = new String[10][2];
+            if (dif == 1){               /* If the input is 1, the EasyQuestions class is called */
+                EasyQuestions.setEasyQuestions();
+                QnA = EasyQuestions.randomQuestions();
+            } else if (dif == 2){       /* If the input is 2, the EasyQuestions class is called */
+                MediumQuestions.setMediumQuestions();
+                QnA = MediumQuestions.randomQuestions();
+            } else {       /* If the input is 3, the EasyQuestions class is called */
+                HardQuestions.setHardQuestions();
+                QnA = HardQuestions.randomQuestions();
+        } else {                    /* If the input is 4 , the MixedQuestions class is called */
+            String[][] QnA = new String[20][2];    
             QnA = MixedQuestions.randomQuestions();
         }
         
@@ -27,9 +27,10 @@ public class MultiPlayer {
         String answer[] = new String[numb]; 
         
         //array for the sum of the points of each player
-        Integer points[] = new Integer[numb]; 
+        Integer points[][] = new Int[numb][2]; 
         for (int k = 0; k < numb; k++) {
-            points[k] = 0;
+            points[k][0] = k;
+            points[k][1] = 0;
         }
 
         Scanner sc = new Scanner(System.in);
