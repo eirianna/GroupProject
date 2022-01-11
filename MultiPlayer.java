@@ -60,7 +60,9 @@ public class MultiPlayer {
         //Sorting array points in descending order
         // mallon tha prepei na exoume k onomata h player#1 kapoia onomasia se pinaka oste na tin taksinomisoume k aftin kai na einai adistixi
         // me tous pontous oste na ine ksekatharo poios ine o nikitis
-        for (i = 0; i < points.length; i++) {
-            if points[i][1]
+       
+        
+        
+            
     }
 }
