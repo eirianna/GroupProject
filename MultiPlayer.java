@@ -55,7 +55,7 @@ public class MultiPlayer {
                     System.exit(0);
                 }
             }
-            System.out.println("The correct answer is " + QnA.get(i).get(1));
+            System.out.println("The correct answer is " + QnA[i][1]);
         }
         //Sorting array points in descending order
         // mallon tha prepei na exoume k onomata h player#1 kapoia onomasia se pinaka oste na tin taksinomisoume k aftin kai na einai adistixi
