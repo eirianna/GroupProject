@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Collections;
 import java.util.Arrays;
 
 public class MultiPlayer {
@@ -35,8 +34,8 @@ public class MultiPlayer {
 
         Scanner sc = new Scanner(System.in);
 
-        for (int i = 0; i < QnA.size(); i++) {
-            System.out.println(QnA.get(i).get(0));
+        for (int i = 0; i < QnA.length; i++) {
+            System.out.println(QnA[i][0]);
             for (int j = 0; j < numb; j++) {
                 do {
                     answer[j] = sc.nextLine();
@@ -46,8 +45,8 @@ public class MultiPlayer {
                 } while (answer[j] != "1" && answer[j] != "2" && answer[j] != "3" && answer[j] != "4" && answer[j] != "q");
 
                 if (answer[j] != "q") { 
-                    if (answer[j] == QnA.get(i).get(1)) {
-                    points[j] += 1; //for each correct answer the player earns 1 point
+                    if (answer[j] == QnA[i][1]) {
+                    points[j] += 100; //for each correct answer the player earns 1 point
                     }
                     if (j < numb - 1) {
                         System.out.println("Next player");
@@ -61,6 +60,6 @@ public class MultiPlayer {
         //Sorting array points in descending order
         // mallon tha prepei na exoume k onomata h player#1 kapoia onomasia se pinaka oste na tin taksinomisoume k aftin kai na einai adistixi
         // me tous pontous oste na ine ksekatharo poios ine o nikitis
-        Arrays.sort(points, Collections.reverseOrder());
+        Arrays.sort(points, (b, a) -> Integer.compare(a[0], b[0]));
     }
 }
