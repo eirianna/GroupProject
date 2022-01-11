@@ -68,11 +68,9 @@ public class FireRound {
         int equals = 1;         /* calculating the ammout of players with the same score*/
         
         for (int i = 1; i < points.length(); i++) {
-            
             if (points[i][1] == points[i-1][1]) {
                 equals += 1;
             }
-            
         }
         
         setFireQuestions();
