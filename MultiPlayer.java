@@ -46,7 +46,7 @@ public class MultiPlayer {
 
                 if (answer[j] != "q") { 
                     if (answer[j] == QnA[i][1]) {
-                    points[j] += 100; //for each correct answer the player earns 1 point
+                    points[j][1] += 100; //for each correct answer the player earns 1 point
                     }
                     if (j < numb - 1) {
                         System.out.println("Next player");
@@ -60,6 +60,7 @@ public class MultiPlayer {
         //Sorting array points in descending order
         // mallon tha prepei na exoume k onomata h player#1 kapoia onomasia se pinaka oste na tin taksinomisoume k aftin kai na einai adistixi
         // me tous pontous oste na ine ksekatharo poios ine o nikitis
-        Arrays.sort(points, (b, a) -> Integer.compare(a[0], b[0]));
+        for (i = 0; i < points.length; i++) {
+            if points[i][1]
     }
 }
