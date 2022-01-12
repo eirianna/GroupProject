@@ -58,7 +58,7 @@ public class MultiPlayer {
             System.out.println("The correct answer is " + QnA[i][1]);
         }
         Arrays.sort(points, new Comparator<int[]> () {      //Sorting array points in descending order
-            public int compare (int[] players, int[] points {
+            public int compare (int[][] points) {
                 if(players[col] > points[col] {
                     return 1; 
                 } else { 
