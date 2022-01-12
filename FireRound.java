@@ -95,6 +95,7 @@ public class FireRound {
             } while (controlArray[cn] == cn);
         
             controlArray[cn] = cn;
+            System.out.printf("Player: " + points[i][0]);
             System.out.println(fireQuestions[cn]);
             String answer;
         
@@ -129,19 +130,20 @@ public class FireRound {
                 for (int j = 0; j<2; j++) {
                     swapping(points[i][j], points[i+1][j]);
                 }
+                swapping2(times[i], times[i+1]);
                 
             } else if (points[i][1] == points[i+1][1]) {
                 if (times[i] > times[i+1]) {                /*if there's another tie, player's answering time is considered*/
-                    for (int j = 0; j<2; j++) {
-                        points[i+1][j] += 50;
+                   points[i+1][1] += 50;
+                   for (int j = 0; j<2; j++) {
                         swapping(points[i][j], points[i+1][j]);
                     }
+                    swapping2(times[i],times[i+1];
                 } else {
                     points[i][j] += 50;
                 }
             }
         }
-        return points;
     }
     
     public static int swapping(int a,int b) {
@@ -150,4 +152,10 @@ public class FireRound {
         b = a;
         return a,b
     }
+   
+    public static long swapping2(long a,long b) {
+        int temp = a;
+        a = b;
+        b = a;
+        return a,b
 }
