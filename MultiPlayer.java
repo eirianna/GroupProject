@@ -57,8 +57,16 @@ public class MultiPlayer {
             }
             System.out.println("The correct answer is " + QnA[i][1]);
         }
-        //Sorting array points in descending order
-        
+        Arrays.sort(points, new Comparator<int[]> () {      //Sorting array points in descending order
+            public int compare (int[] players, int[] points {
+                if(players[col] > points[col] {
+                    return 1; 
+                } else { 
+                    return -1
+                }
+            }
+        });
+            
         FireRound.round(points);
         //o πινακας points ειναι ταξινομημενος εκ νεου με τα καινουρια αποτελεσματα μετα τον γυρο φωτια. 1η στηλη οι παικτες, 2η τα σκορ τους.
         
