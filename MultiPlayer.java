@@ -11,10 +11,10 @@ public class MultiPlayer {
             if (dif == 1){               /* If the input is 1, the EasyQuestions class is called */
                 EasyQuestions.setEasyQuestions();
                 QnA = EasyQuestions.randomQuestions();
-            } else if (dif == 2){       /* If the input is 2, the EasyQuestions class is called */
+            } else if (dif == 2){       /* If the input is 2, the MediumQuestions class is called */
                 MediumQuestions.setMediumQuestions();
                 QnA = MediumQuestions.randomQuestions();
-            } else {       /* If the input is 3, the EasyQuestions class is called */
+            } else {       /* If the input is 3, the HardQuestions class is called */
                 HardQuestions.setHardQuestions();
                 QnA = HardQuestions.randomQuestions();
         } else {                    /* If the input is 4 , the MixedQuestions class is called */
