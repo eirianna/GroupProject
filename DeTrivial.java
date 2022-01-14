@@ -6,14 +6,14 @@ public class DeTrivial {
 
     public static void main(String[] args) {
         Welcome.message(); /*Prints a welcoming message*/
-        System.out.println("START GAME (press 1)\n" + "INSTRUCTIONS (press 2)\n" + "EXIT GAME (press 3)");
+        System.out.println("Έναρξη παιχνιδιού (πατήστε 1)\n" + "Οδηγίες (πατήστε 2)\n" + "Έξοδος παιχνιδιού (πατήστε 3)");
         Scanner sc = new Scanner(System.in);
 
         int choice = sc.nextInt();
         do {
             choice = sc.nextInt(); /* The choice of the player */
             if (choice < 1 || choice > 3) {
-                System.out.println("Invalid option. Please try again.");
+                System.out.println("Λάθος επιλογή. Παρακαλώ προσπαθείστε ξανά.");
             }
         } while (choice < 1 || choice > 3);
 
