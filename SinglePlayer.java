@@ -23,14 +23,17 @@ public class SinglePlayer {
         }
         int points = 0;
         String answer;
+        
+        Scanner sc = new Scanner(System.in);
+        
         for (int i = 0; i < QnA.length; i++) {
-            System.out.println(QnA[i, 0]);
+            System.out.println(QnA[i][0]);
             do {
-                answer = sc.nextString();
+                answer = sc.nextLine();
                 if (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q") {       /* If answer is not one of these options, the game asks the player asks the player to answer again */
-                    System.out.println("Λάθος επιλογή. Παρακαλώ προσπαθείστε ξανά.")
+                    System.out.println("Λάθος επιλογή. Παρακαλώ προσπαθείστε ξανά.");
                 }
-            } while (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q")
+            } while (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q");
 
             if (answer == "q") {
                 System.exit(0);     /* This is the case where the player has chosen q, so the game exits */
