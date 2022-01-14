@@ -1,46 +1,56 @@
 import java.util.Scanner;
 
-public class DeTrivial {
-    public static char numb1;    /* numb = number of players who will play the game*/
-    public static char dif1;    /*Variable dif indicates the difficulty of the game*/
+public class SinglePlayer {
 
-    public static void main(String[] args) {
-        Welcome.message(); /*Prints a welcoming message*/
-        System.out.println("START GAME (press 1)\n" + "INSTRUCTIONS (press 2)\n" + "EXIT GAME (press 3)");
-        Scanner sc = new Scanner(System.in);
+    public static void questions() {
 
-        int choice = sc.nextInt();
-        do {
-            choice = sc.nextInt(); /* The choice of the player */
-            if (choice < 1 || choice > 3) {
-                System.out.println("Invalid option. Please try again.");
+        int dif = Character.getNumericValue(DeTrivial.dif1);
+        if (dif != 4) {
+            String[][] QnA = new String[10][2];
+            if (dif == 1) {               /* If the input is 1, the EasyQuestions class is called */
+                EasyQuestions.setEasyQuestions();
+                QnA = EasyQuestions.randomQuestions();
+            } else if (dif == 2) {       /* If the input is 2, the EasyQuestions class is called */
+                MediumQuestions.setMediumQuestions();
+                QnA = MediumQuestions.randomQuestions();
+            } else if (dif == 3) {       /* If the input is 3, the EasyQuestions class is called */
+                HardQuestions.setHardQuestions();
+                QnA = HardQuestions.randomQuestions();
             }
-        } while (choice < 1 || choice > 3);
-
-        if (choice == 1) {            /*if choice = 1, the game asks for the difficulty level and the number of players*/
-            Welcome.level();
-            Welcome.players();
-        } else if (choice == 2) {        /*if choice = 2, the game shows its instructions*/
-            instructions();
-        } else {
-            System.exit(0);            /*if choice = 3, the player(s) exits the game*/
+        } else {                    /* If the input is 4 , the MixedQuestions class is called */
+            String[][] QnA = new String[20][2];
+            QnA = MixedQuestions.randomQuestions();
         }
+        int points = 0;
+        String answer;
+        for (int i = 0; i < QnA.length; i++) {
+            System.out.println(QnA[i, 0]);
+            do {
+                answer = sc.nextString();
+                if (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q") {       /* If answer is not one of these options, the game asks the player asks the player to answer again */
+                    System.out.println("Invalid option. Please try again.")
+                }
+            } while (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q")
 
-    }
-
-    /* The instructions of the game */
-    public static void instructions() {
-        System.out.println("Το παιχνίδι αποτελείται από ένα σύνολο 60 ερωτήσεων που αφορούν την\n" +
-                "ελληνική ιστορία, μυθολογία, γεωγραφία και πολιτισμό. Χωρίζεται σε 4\n" +
-                "επίπεδα:εύκολο, μέτριο, δύσκολο και μεικτό στο οποίο υπάρχει διαβάθμιση\n" +
-                "ερωτήσεων από εύκολες σε δύσκολες. Το κάθε επίπεδο αποτελείται απο 10 ερωτήσεις\n" +
-                "εκτός του μεικτού που αποτελείται από 30. Δίνεται η δυνατότητα στον παίκτη να\n" +
-                "να παίξει μόνος του (singleplayer) ή με άλλα άτομα (multiplayer). Σκοπός του\n" +
-                "singleplayer είναι να απαντήσει σωστά σε όσες περισσότερες ερωτήσεις μπορεί\n" +
-                "ενώ στο multiplayer οι παίκτες δέχονται τις ίδιες ερωτήσεις και όποιος απαντήσει\n" +
-                "σωστά στις περισσότερες αναδεικνύεται νικητής. Στο multiplayer, σε περίπτωση\n" +
-                "ισοβασθμίας 2 παικτών, θα υπάρξει ένας τελευταίος γύρος 'φωτιά' στον όποιο γίνεται\n" +
-                "1 διαφορετική ερώτηση στον καθένα και αυτός που θα απαντήσει σωστά νικάει.");
+            if (answer == "q") {
+                System.exit(0);     /* This is the case where the player has chosen q, so the game exits */
+            } else if (answer == QnA[i][1]) {
+                System.out.println("CORRECT ANSWER!");
+                points = points + 100;
+            } else {
+                System.out.println("WRONG ANSWER...");
+            }
+        }
+        int realPoints = points / QnA.length;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
+        System.out.printf("The game has ended, you gathered %d points!", points);
+        if (realPoints < 50) {
+            System.out.println("You can do better than that!");
+        } else if (realPoints < 80) {
+            System.out.println("You 've done your research!!!");
+        } else {
+            System.out.println("Have you ever considered getting a citizenship from Greece?");
+        }
+        System.out.println("The developers' team thanks you for joining us on this cultural journey.");
+        System.out.println("We hope you enjoyed it as much as we did!");
     }
 }
-
