@@ -28,29 +28,29 @@ public class SinglePlayer {
             do {
                 answer = sc.nextString();
                 if (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q") {       /* If answer is not one of these options, the game asks the player asks the player to answer again */
-                    System.out.println("Invalid option. Please try again.")
+                    System.out.println("Λάθος επιλογή. Παρακαλώ προσπαθείστε ξανά.")
                 }
             } while (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q")
 
             if (answer == "q") {
                 System.exit(0);     /* This is the case where the player has chosen q, so the game exits */
             } else if (answer == QnA[i][1]) {
-                System.out.println("CORRECT ANSWER!");
+                System.out.println("ΣΩΣΤΉ ΑΠΆΝΤΗΣΗ!");
                 points = points + 100;
             } else {
-                System.out.println("WRONG ANSWER...");
+                System.out.println("ΛΆΘΟΣ ΑΠΆΝΤΗΣΗ...");
             }
         }
         int realPoints = points / QnA.length;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
-        System.out.printf("The game has ended, you gathered %d points!", points);
+        System.out.printf("Το παιχνίδι τελείωσε, συγκέντρωσες %d πόντους!", points);
         if (realPoints < 50) {
-            System.out.println("You can do better than that!");
+            System.out.println("Μπορείς να τα πας καλύτερα!");
         } else if (realPoints < 80) {
-            System.out.println("You 've done your research!!!");
+            System.out.println("Έχεις κάνει την έρευνα σου!!!");
         } else {
-            System.out.println("Have you ever considered getting a citizenship from Greece?");
+            System.out.println("Μήπως είσαι από την Ελλάδα;");
         }
-        System.out.println("The developers' team thanks you for joining us on this cultural journey.");
-        System.out.println("We hope you enjoyed it as much as we did!");
+        System.out.println("Η ομάδα προγραμματιστών σε ευχαριστεί που ήσουν μαζί μασ σε αυτό το εκπαιδευτικό ταξίδι.");
+        System.out.println("Ελπίζουμε να το απόλαυσες όσο και εμείς!");
     }
 }
