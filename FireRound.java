@@ -128,35 +128,29 @@ public class FireRound {
         for (int i = 0; i<equals - 1; i++) {        /*rearranging points array according to new results*/
             if (points[i][1] < points[i+1][1]) {
                 for (int j = 0; j<2; j++) {
-                    swapping(points[i][j], points[i+1][j]);
+                    int temp = points[i][j];
+                    points[i][j] = points[i+1][j];
+                    points[i+1][j] = temp;
                 }
-                swapping2(times[i], times[i+1]);
+                long temp2 = times[i];
+                times[i] = times[i+1];
+                times[i+1] = temp;
                 
             } else if (points[i][1] == points[i+1][1]) {
                 if (times[i] > times[i+1]) {                /*if there's another tie, player's answering time is considered*/
                    points[i+1][1] += 50;
                    for (int j = 0; j<2; j++) {
-                        swapping(points[i][j], points[i+1][j]);
-                    }
-                    swapping2(times[i],times[i+1]);
+                      int temp = points[i][j];
+                      points[i][j] = points[i+1][j];
+                      points[i+1][j] = temp;  
+                   }
+                   long temp2 = times[i];
+                   times[i] = times[i+1];
+                   times[i+1] = temp;
                 } else {
                     points[i][j] += 50;
                 }
             }
         }
-    }
-    
-    public static int swapping(int a,int b) {
-        int temp = a;
-        a = b;
-        b = a;
-        return a,b;
-    }
-   
-    public static long swapping2(long a,long b) {
-        int temp = a;
-        a = b;
-        b = a;
-        return a,b;
     }
 }
