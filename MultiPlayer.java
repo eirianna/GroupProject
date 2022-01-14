@@ -72,8 +72,11 @@ public class MultiPlayer {
         }
         //o πινακας points ειναι ταξινομημενος εκ νεου με τα καινουρια αποτελεσματα μετα τον γυρο φωτια. 1η στηλη οι παικτες, 2η τα σκορ τους.
         
-        int realPoints = points / QnA.length;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
-        System.out.println("The game has ended, you gathered %d points!", points);
+        double realPoints[][] = new double[numb][2]; 
+        for (int i = 0; i<points.length; i++) {    
+            realPoints[i][0] = points[i][0];
+            realPoints[i][1] = points[i][1] / QnA.length;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
+            System.out.println("Player ",points[i][0], " you gathered ", realPoints[i][1], " points!");
             if (realPoints <50) {
                 System.out.println("You can do better than that!");
             } else if (realPoints <80) {
@@ -81,6 +84,7 @@ public class MultiPlayer {
             } else {    
                 System.out.println("Have you ever considered getting a citizenship from Greece?");
             }
+        }
         System.out.println("The developers' team thanks you for joining us on this cultural journey.");
         System.out.println("We hope you enjoyed it as much as we did!");
         
