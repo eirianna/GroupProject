@@ -66,8 +66,10 @@ public class MultiPlayer {
                 }
             }
         });
-            
-        FireRound.round(points);
+        
+        if (points[0][1] == points[1][1]) {        
+            FireRound.round(points);
+        }
         //o πινακας points ειναι ταξινομημενος εκ νεου με τα καινουρια αποτελεσματα μετα τον γυρο φωτια. 1η στηλη οι παικτες, 2η τα σκορ τους.
         
         int realPoints = points / QnA.length;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
