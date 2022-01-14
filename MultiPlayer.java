@@ -70,7 +70,17 @@ public class MultiPlayer {
         FireRound.round(points);
         //o πινακας points ειναι ταξινομημενος εκ νεου με τα καινουρια αποτελεσματα μετα τον γυρο φωτια. 1η στηλη οι παικτες, 2η τα σκορ τους.
         
-        
+        int realPoints = points / QnA.length;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
+        System.out.println("The game has ended, you gathered %d points!", points);
+            if (realPoints <50) {
+                System.out.println("You can do better than that!");
+            } else if (realPoints <80) {
+                System.out.println("You 've done your research!!!");
+            } else {    
+                System.out.println("Have you ever considered getting a citizenship from Greece?");
+            }
+        System.out.println("The developers' team thanks you for joining us on this cultural journey.");
+        System.out.println("We hope you enjoyed it as much as we did!");
         
             
     }
