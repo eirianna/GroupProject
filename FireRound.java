@@ -95,7 +95,7 @@ public class FireRound {
             } while (controlArray[cn] == cn);
         
             controlArray[cn] = cn;
-            System.out.printf("Player: " + points[i][0]);
+            System.out.printf("Παίκτης: " + points[i][0]);
             System.out.println(fireQuestions[cn]);
             String answer;
         
@@ -103,7 +103,7 @@ public class FireRound {
             do {
                 answer = sc.nextLine();
                 if (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q") {
-                    System.out.println("Invalid option. Please try again.");
+                    System.out.println("Λάθος επιλογή. Παρακαλώ προσπαθείστε ξανά.");
                 }
             } while (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q");
             long estimatedTime = System.nanoTime() - startTime;
@@ -114,14 +114,14 @@ public class FireRound {
                     System.out.println("Σωστή απάντηση!");
                     points[i][1] += 100;
                 } else {
-                    System.out.println("Λάθος απάντηση.. η σωστή απάντηση ειναι: ", fireAnswers[cn]);
+                    System.out.println("Λάθος απάντηση.. η σωστή απάντηση είναι: ", fireAnswers[cn]);
                 }
             } else {
                 System.exit(0);
             }
             
             if (i < equals - 1) {
-                System.out.println("Next player");
+                System.out.println("Επόμενος παίκτης");
             }
         }
         
