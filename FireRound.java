@@ -138,7 +138,7 @@ public class FireRound {
                    for (int j = 0; j<2; j++) {
                         swapping(points[i][j], points[i+1][j]);
                     }
-                    swapping2(times[i],times[i+1];
+                    swapping2(times[i],times[i+1]);
                 } else {
                     points[i][j] += 50;
                 }
@@ -150,12 +150,13 @@ public class FireRound {
         int temp = a;
         a = b;
         b = a;
-        return a,b
+        return a,b;
     }
    
     public static long swapping2(long a,long b) {
         int temp = a;
         a = b;
         b = a;
-        return a,b
+        return a,b;
+    }
 }
