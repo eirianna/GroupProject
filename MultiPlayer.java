@@ -50,23 +50,26 @@ public class MultiPlayer {
                         points[j][1] += 100; //for each correct answer the player earns 1 point
                     }
                     if (j < numb - 1) {
-                        System.out.println("Επόμενος παίκτης");
+                        System.out.println("Next player");
                     }
                 } else {
                     System.exit(0);
                 }
             }
-            System.out.println("Η σωστή απάντηση είναι : " + QnA[i][1]);
+            System.out.println("The correct answer is " + QnA[i][1]);
         }
-        Arrays.sort(points, new Comparator<int[]>() {      //Sorting array points in descending order
-            public int compare(int[][] points) {
-                if (players[col] > points[col] {
-                    return 1;
-                } else{
-                    return -1
+        // sorting array points in descending order
+        for (int i = 0; i < ( numb - 1 ); i++) {
+            for (int j = 0; j < (numb - i - 1); j++) {
+                if (points[0][j] < points[0][j+1]) {
+                    for (int k = 0; k<2; k++) {
+                        int temp = points[k][j];
+                        points[k][j] = points[k][j+1];
+                        points[k][j+1] = temp;
+                    }
                 }
-            }
-        });
+            }    
+        }
 
         if (points[0][1] == points[1][1]) {
             FireRound.round(points);
@@ -78,20 +81,20 @@ public class MultiPlayer {
         for (int i = 0; i < points.length; i++) {
             realPoints[i][0] = points[i][0];
             realPoints[i][1] = points[i][1] / QnA.length;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
-            System.out.println("Παίκτη ", points[i][0], " συγκέντρωσες ", realPoints[i][1], " πόντους και ήρθες στην ",place, " θέση!" );
+            System.out.println("Player ", points[i][0], " you gathered ", realPoints[i][1], " points and came in the ",place, " place!" );
             if (realPoints < 50) {
-                System.out.println("Μπορείς να τα πας καλύτερα!");
+                System.out.println("You can do better than that!");
             } else if (realPoints < 80) {
-                System.out.println("Έκανες την έρευνά σου!!!");
+                System.out.println("You 've done your research!!!");
             } else {
-                System.out.println("Μήπως έχεις μεγαλώσει στην Ελλάδα;");
+                System.out.println("Have you ever considered getting a citizenship from Greece?");
             }
             if (i<points.length - 1 && realPoints[i][1] != realPoints[i+1][1]) {
                 place += 1;
             }
         }
-        System.out.println("Η ομάδα προγραμματιστών σας ευχαριστεί που συμμετείχατε σε αυτό το εκπαιδευτικό παιχνίδι.");
-        System.out.println("Ελπίζουμε να το απολαύσατε όπως εμείς!");
+        System.out.println("The developers' team thanks you for joining us on this cultural journey.");
+        System.out.println("We hope you enjoyed it as much as we did!");
 
 
     }
