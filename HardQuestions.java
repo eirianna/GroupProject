@@ -140,6 +140,9 @@ public class HardQuestions {
 
     protected static String[][] hardArray = new String[10][2];
     public static String[][] randomQuestions() {
+       
+        setHardQuestions();
+        setHardAnswers();
         Random randomNumber = new Random();
         int cn;
 
