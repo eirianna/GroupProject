@@ -6,27 +6,28 @@ public class DeTrivial {
 
     public static void main(String[] args) {
         Welcome.message(); /*Prints a welcoming message*/
-        System.out.println("Έναρξη παιχνιδιού (πατήστε 1)\n" + "Οδηγίες (πατήστε 2)\n" + "Έξοδος παιχνιδιού (πατήστε 3)");
-        Scanner sc = new Scanner(System.in);
+        int choice = 2;
+        while (choice = 2) {
+            System.out.println("Έναρξη παιχνιδιού (πατήστε 1)\n" + "Οδηγίες (πατήστε 2)\n" + "Έξοδος παιχνιδιού (πατήστε 3)");
+            Scanner sc = new Scanner(System.in);
 
-        int choice;
-        do {
-            choice = sc.nextInt(); /* The choice of the player */
-            if (choice < 1 || choice > 3) {
-                System.out.println("Λάθος επιλογή. Παρακαλώ προσπαθείστε ξανά.");
+            do {
+                choice = sc.nextInt(); /* The choice of the player */
+                if (choice < 1 || choice > 3) {
+                    System.out.println("Λάθος επιλογή. Παρακαλώ προσπαθείστε ξανά.");
+                }
+            } while (choice < 1 || choice > 3);
+
+
+            if (choice == 1) {            /*if choice = 1, the game asks for the difficulty level and the number of players*/
+                Welcome.level();
+                Welcome.players();
+            } else if (choice == 2) {        /*if choice = 2, the game shows its instructions*/
+                instructions();
+            } else {
+                System.exit(0);            /*if choice = 3, the player(s) exits the game*/
             }
-        } while (choice < 1 || choice > 3);
-
-
-        if (choice == 1) {            /*if choice = 1, the game asks for the difficulty level and the number of players*/
-            Welcome.level();
-            Welcome.players();
-        } else if (choice == 2) {        /*if choice = 2, the game shows its instructions*/
-            instructions();
-        } else {
-            System.exit(0);            /*if choice = 3, the player(s) exits the game*/
         }
-
 
 
     }
