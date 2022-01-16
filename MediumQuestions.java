@@ -137,6 +137,9 @@ public class MediumQuestions {
     }
     protected static String[][] MediumArray = new String[10][2];
     public static String[][] randomQuestions() {
+        
+        setMediumQuestions();
+        setMediumAnswers();
         Random randomNumber = new Random();
         int cn;
 
