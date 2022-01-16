@@ -143,6 +143,9 @@ public class EasyQuestions {
     protected static String [][] easyArray = new String[10][2];
 
     public static String[][] randomQuestions() {
+        
+        setEasyQuestions();
+        setEasyAnswers();
         Random randomNumber = new Random();
         int cn;
 
