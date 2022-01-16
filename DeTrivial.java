@@ -7,7 +7,7 @@ public class DeTrivial {
     public static void main(String[] args) {
         Welcome.message(); /*Prints a welcoming message*/
         int choice = 2;
-        while (choice = 2) {
+        while (choice == 2) {
             System.out.println("Έναρξη παιχνιδιού (πατήστε 1)\n" + "Οδηγίες (πατήστε 2)\n" + "Έξοδος παιχνιδιού (πατήστε 3)");
             Scanner sc = new Scanner(System.in);
 
