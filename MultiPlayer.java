@@ -1,10 +1,8 @@
-import java.util.Scanner;
-import java.util.Arrays;
+import java.util.Scanner;;
 
 public class MultiPlayer {
 
     public static void questions() {
-
         String [][] QnA;
         int dif = Character.getNumericValue(DeTrivial.dif1);
         if (dif != 4) {
@@ -41,13 +39,13 @@ public class MultiPlayer {
             for (int j = 0; j < numb; j++) {
                 do {
                     answer[j] = sc.nextLine();
-                    if (answer[j] != "1" && answer[j] != "2" && answer[j] != "3" && answer[j] != "4" && answer[j] != "q") {
+                    if (!answer[j].equals( "1") && !answer[j].equals( "1") && !answer[j].equals( "3") && !answer[j].equals( "4") && !answer[j].equals( "q")) {
                         System.out.println("Invalid option. Please try again.");
                     }
-                } while (answer[j] != "1" && answer[j] != "2" && answer[j] != "3" && answer[j] != "4" && answer[j] != "q");
+                } while (!answer[j].equals( "1") && !answer[j].equals( "2") && !answer[j].equals( "3") && !answer[j].equals( "4") && !answer[j].equals( "q"));
 
-                if (answer[j] != "q") {
-                    if (answer[j] == QnA[i][1]) {
+                if (!answer[j].equals( "q")) {
+                    if (answer[j].equals( QnA[i][1])) {
                         points[j][1] += 100; //for each correct answer the player earns 1 point
                     }
                     if (j < numb - 1) {
@@ -69,7 +67,7 @@ public class MultiPlayer {
                         points[k][j+1] = temp;
                     }
                 }
-            }    
+            }
         }
 
         if (points[0][1] == points[1][1]) {
@@ -82,10 +80,10 @@ public class MultiPlayer {
         for (int i = 0; i < points.length; i++) {
             realPoints[i][0] = points[i][0];
             realPoints[i][1] = points[i][1] / QnA.length;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
-            System.out.println("Παίκτη ", points[i][0], " συγκέντρωσες ", realPoints[i][1], " πόντους και ήρθες στην ",place, " θέση!" );
-            if (realPoints < 50) {
+            System.out.printf("Παίκτη ", points[i][0], " συγκέντρωσες ", realPoints[i][1], " πόντους και ήρθες στην ",place, " θέση!" );
+            if (realPoints[i][1] < 50) {
                 System.out.println("Μπορείς να τα πας καλύτερα!");
-            } else if (realPoints < 80) {
+            } else if (realPoints[i][1] <80) {
                 System.out.println("Έχεις κάνει την έρευνα σου!!!");
             } else {
                 System.out.println("Μήπως είσαι από την Ελλάδα;");
