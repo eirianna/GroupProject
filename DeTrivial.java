@@ -9,7 +9,7 @@ public class DeTrivial {
         System.out.println("Έναρξη παιχνιδιού (πατήστε 1)\n" + "Οδηγίες (πατήστε 2)\n" + "Έξοδος παιχνιδιού (πατήστε 3)");
         Scanner sc = new Scanner(System.in);
 
-        int choice = sc.nextInt();
+        int choice;
         do {
             choice = sc.nextInt(); /* The choice of the player */
             if (choice < 1 || choice > 3) {
@@ -17,14 +17,17 @@ public class DeTrivial {
             }
         } while (choice < 1 || choice > 3);
 
-        if (choice == 1) {            /*if choice = 1, the game asks for the difficulty level and the number of players*/
-            Welcome.level();
-            Welcome.players();
-        } else if (choice == 2) {        /*if choice = 2, the game shows its instructions*/
-            instructions();
-        } else {
-            System.exit(0);            /*if choice = 3, the player(s) exits the game*/
-        }
+
+            if (choice == 1) {            /*if choice = 1, the game asks for the difficulty level and the number of players*/
+                Welcome.level();
+                Welcome.players();
+            } else if (choice == 2) {        /*if choice = 2, the game shows its instructions*/
+                instructions();
+            } else {
+                System.exit(0);            /*if choice = 3, the player(s) exits the game*/
+            }
+
+
 
     }
 
@@ -43,4 +46,3 @@ public class DeTrivial {
                 "1 διαφορετική ερώτηση στον καθένα και αυτός που θα απαντήσει σωστά νικάει.");
     }
 }
-
