@@ -25,7 +25,7 @@ public class Welcome {
 
         if (DeTrivial.numb1 == 'q') {
             System.exit(0);
-        } else if (DeTrivial.numb1 == 1) {      /* If the input is 1, then the SinglePlayer class is called */
+        } else if (DeTrivial.numb1 == '1') {      /* If the input is 1, then the SinglePlayer class is called */
             SinglePlayer.questions();
         } else {
             MultiPlayer.questions(); /* If the input isn't 1, then the MultiPlayer class is called */
