@@ -18,14 +18,14 @@ public class DeTrivial {
         } while (choice < 1 || choice > 3);
 
 
-            if (choice == 1) {            /*if choice = 1, the game asks for the difficulty level and the number of players*/
-                Welcome.level();
-                Welcome.players();
-            } else if (choice == 2) {        /*if choice = 2, the game shows its instructions*/
-                instructions();
-            } else {
-                System.exit(0);            /*if choice = 3, the player(s) exits the game*/
-            }
+        if (choice == 1) {            /*if choice = 1, the game asks for the difficulty level and the number of players*/
+            Welcome.level();
+            Welcome.players();
+        } else if (choice == 2) {        /*if choice = 2, the game shows its instructions*/
+            instructions();
+        } else {
+            System.exit(0);            /*if choice = 3, the player(s) exits the game*/
+        }
 
 
 
