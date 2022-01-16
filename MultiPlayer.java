@@ -39,8 +39,8 @@ public class MultiPlayer {
             for (int j = 0; j < numb; j++) {
                 do {
                     answer[j] = sc.nextLine();
-                    if (!answer[j].equals( "1") && !answer[j].equals( "1") && !answer[j].equals( "3") && !answer[j].equals( "4") && !answer[j].equals( "q")) {
-                        System.out.println("Invalid option. Please try again.");
+                    if (!answer[j].equals( "1") && !answer[j].equals( "2") && !answer[j].equals( "3") && !answer[j].equals( "4") && !answer[j].equals( "q")) {
+                        System.out.println("Λάθος επιλογή, παρακαλώ προσπαθείστε ξανά.");
                     }
                 } while (!answer[j].equals( "1") && !answer[j].equals( "2") && !answer[j].equals( "3") && !answer[j].equals( "4") && !answer[j].equals( "q"));
 
