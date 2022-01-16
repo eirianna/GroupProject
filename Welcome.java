@@ -20,7 +20,7 @@ public class Welcome {
                 System.out.println("Παρακαλώ προσπαθείστε ξανά!");
             }
         } while (DeTrivial.numb1 != '1' && DeTrivial.numb1 != '2' && DeTrivial.numb1 != '3'
-                && DeTrivial.numb1 != 4 && DeTrivial.numb1 != 'q');
+                && DeTrivial.numb1 != '4' && DeTrivial.numb1 != 'q');
 
 
         if (DeTrivial.numb1 == 'q') {
@@ -38,10 +38,10 @@ public class Welcome {
             System.out.print("1. Εύκολο, 2. Μέτριο, 3. Δύσκολο, 4. Μίξη");
             DeTrivial.dif1 = input.next().charAt(0);      /* The player inputs the difficulty level */
             if (DeTrivial.dif1 != '1' && DeTrivial.dif1 != '2' && DeTrivial.dif1 != '3'
-                    && DeTrivial.dif1 != 4 && DeTrivial.dif1 != 'q') {
+                    && DeTrivial.dif1 != '4' && DeTrivial.dif1 != 'q') {
                 System.out.println("Παρακαλώ προσπαθείστε ξανά!");
             }
         } while (DeTrivial.dif1 != '1' && DeTrivial.dif1 != '2' && DeTrivial.dif1 != '3'
-                && DeTrivial.dif1 != 4 && DeTrivial.dif1 != 'q');
+                && DeTrivial.dif1 != '4' && DeTrivial.dif1 != 'q');
     }
 }
