@@ -5,9 +5,10 @@ public class MultiPlayer {
 
     public static void questions() {
 
+        String [][] QnA;
         int dif = Character.getNumericValue(DeTrivial.dif1);
         if (dif != 4) {
-            String[][] QnA = new String[10][2];
+            QnA = new String[10][2];
             if (dif == 1) {               /* If the input is 1, the EasyQuestions class is called */
                 EasyQuestions.setEasyQuestions();
                 QnA = EasyQuestions.randomQuestions();
@@ -19,7 +20,7 @@ public class MultiPlayer {
                 QnA = HardQuestions.randomQuestions();
             }
         } else {                    /* If the input is 4 , the MixedQuestions class is called */
-            String[][] QnA = new String[20][2];
+            QnA = new String[20][2];
             QnA = MixedQuestions.randomQuestions();
         }
 
