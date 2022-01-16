@@ -4,9 +4,10 @@ public class SinglePlayer {
 
     public static void questions() {
 
+        String [][] QnA;
         int dif = Character.getNumericValue(DeTrivial.dif1);
         if (dif != 4) {
-            String[][] QnA = new String[10][2];
+            QnA = new String[10][2];
             if (dif == 1) {               /* If the input is 1, the EasyQuestions class is called */
                 EasyQuestions.setEasyQuestions();
                 QnA = EasyQuestions.randomQuestions();
@@ -18,7 +19,7 @@ public class SinglePlayer {
                 QnA = HardQuestions.randomQuestions();
             }
         } else {                    /* If the input is 4 , the MixedQuestions class is called */
-            String[][] QnA = new String[20][2];
+            QnA = new String[20][2];
             QnA = MixedQuestions.randomQuestions();
         }
         int points = 0;
@@ -51,7 +52,7 @@ public class SinglePlayer {
         } else if (realPoints < 80) {
             System.out.println("Έχεις κάνει την έρευνα σου!!!");
         } else {
-            System.out.println("Μήπως είσαι από την Ελλάδα;");
+            System.out.println("Συγχαρητήρια! Οι γνώσεις σου ειναι αξιοθαύμαστες");
         }
         System.out.println("Η ομάδα προγραμματιστών σε ευχαριστεί που ήσουν μαζί μασ σε αυτό το εκπαιδευτικό ταξίδι.");
         System.out.println("Ελπίζουμε να το απόλαυσες όσο και εμείς!");
