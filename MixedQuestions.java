@@ -2,30 +2,31 @@ import java.util.Random;
 
 public class MixedQuestions {
 
-
+    protected static String[][] mixedArray = new String[20][2];
+    protected static String [] mixedQE = new String[60];             //includes all the questions of all levels
+    protected static String [] mixedAN = new String[60];
 
     public static String[][] randomQuestions() {
-
-        String [] mixedQE = new String[60];             //includes all the questions of all levels
-        String [] mixedAN = new String[60];             //includes all the answers of all levels
 
         EasyQuestions.setEasyQuestions();                 //setting every level's questions
         MediumQuestions.setMediumQuestions();
         HardQuestions.setHardQuestions();
-        mixedQE = EasyQuestions.getEasyQuestions();           //filling mixedQE with the questions
-        mixedQE = MediumQuestions.getMediumQuestions();
-        mixedQE = HardQuestions.getHardQuestions();
+        System.arraycopy(EasyQuestions.getEasyQuestions(),0,mixedQE,0,20);
+        System.arraycopy(MediumQuestions.getMediumQuestions(),0,mixedQE,20,20);
+        System.arraycopy(HardQuestions.getHardQuestions(),0,mixedQE,20,20);
 
-        EasyQuestions.setEasyAnswers();                       //same for answers
+
+        EasyQuestions.setEasyAnswers();                //same for answers
         MediumQuestions.setMediumAnswers();
         HardQuestions.setHardAnswers();
-        mixedAN = EasyQuestions.getEasyAnswers();
-        mixedAN = MediumQuestions.getMediumAnswers();
-        mixedAN = HardQuestions.getHardAnswers();
+        System.arraycopy(EasyQuestions.getEasyAnswers(),0,mixedAN,0,20);
+        System.arraycopy(MediumQuestions.getMediumAnswers(),0,mixedAN,20,20);
+        System.arraycopy(HardQuestions.getHardAnswers(),0,mixedAN,20,20);
+
 
         Random randomNumber = new Random();                 //creation of array with the 20 random questions and answers
         int cn;
-        String[][] mixedArray = new String[20][2];
+
         int[] controlArray = new int[60];
 
         for (int i = 0; i < 60; i++) {
