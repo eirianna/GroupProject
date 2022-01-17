@@ -65,8 +65,9 @@ public class FireRound {
 
     public static int[][] round(int [][] points) {
         
+        System.out.println();
         System.out.println("Καλώς ήρθατε στον γύρο φωτιά! Οι παίκτες με ίδιες βαθμολογίες απαντούν σε μερικές ακόμα\n"
-        + "ερωτήσεις για την ανάδειξη του νικητή!");
+        + "ερωτήσεις για την ανάδειξη του νικητή!\n");
         
         int equals = 1;         /* calculating the ammount of players with the same score*/
 
@@ -98,7 +99,7 @@ public class FireRound {
             } while (controlArray[cn] == cn);
 
             controlArray[cn] = cn;
-            System.out.printf("Παίκτης: ", points[i][0]);
+            System.out.println("Παίκτης: " + points[i][0]);
             System.out.println(fireQuestions[cn]);
             String answer;
 
