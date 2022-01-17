@@ -15,7 +15,7 @@ public class Welcome {
             System.out.println("Εισάγετε αριθμό παικτών (μέχρι 4), ή πατήστε 'q' για να βγείτε: ");
             DeTrivial.numb1 = input.next().charAt(0);     /* The player inputs the number of players */
             if (DeTrivial.numb1 != '1' && DeTrivial.numb1 != '2' && DeTrivial.numb1 != '3'
-                    && DeTrivial.numb1 != 4 && DeTrivial.numb1 != 'q') {
+                    && DeTrivial.numb1 != '4' && DeTrivial.numb1 != 'q') {
                 System.out.println("Παρακαλώ προσπαθείστε ξανά!");
             }
         } while (DeTrivial.numb1 != '1' && DeTrivial.numb1 != '2' && DeTrivial.numb1 != '3'
