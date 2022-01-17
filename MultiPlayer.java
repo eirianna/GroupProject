@@ -79,6 +79,7 @@ public class MultiPlayer {
         for (int i = 0; i < points.length; i++) {
             realPoints[i][0] = points[i][0];
             realPoints[i][1] = points[i][1] / QnA.length;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
+            System.out.println();
             System.out.printf("Παίκτη " + (points[i][0] + 1) + " συγκέντρωσες " + realPoints[i][1] + " πόντους και ήρθες στην " + place + "η θέση! " );
             if (realPoints[i][1] < 50) {
                 System.out.println("Μπορείς να τα πας καλύτερα!");
@@ -91,6 +92,7 @@ public class MultiPlayer {
                 place += 1;
             }
         }
+        System.out.println();
         System.out.println("Η ομάδα προγραμματιστών σε ευχαριστεί που ήσουν μαζί μασ σε αυτό το εκπαιδευτικό ταξίδι.");
         System.out.println("Ελπίζουμε να το απόλαυσες όσο και εμείς!");
 
