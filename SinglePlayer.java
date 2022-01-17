@@ -35,7 +35,7 @@ public class SinglePlayer {
             do {
                 answer = sc.nextLine();
                 if (!answer.equals( "1") && !answer.equals( "2") && !answer.equals( "3") && !answer.equals( "4") && !answer.equals( "q")) {       /* If answer is not one of these options, the game asks the player asks the player to answer again */
-                    System.out.println("Λάθος επιλογή. Παρακαλώ προσπαθείστε ξανά.");
+                    System.out.println("Λάθος επιλογή. Παρακαλώ προσπαθήστε ξανά.");
                 }
             } while (!answer.equals( "1") && !answer.equals( "2") && !answer.equals( "3") && !answer.equals( "4") && !answer.equals( "q"));
 
