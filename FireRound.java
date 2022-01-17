@@ -64,7 +64,10 @@ public class FireRound {
     }
 
     public static int[][] round(int [][] points) {
-
+        
+        System.out.println("Καλώς ήρθατε στον γύρο φωτιά! Οι παίκτες με ίδιες βαθμολογίες απαντούν σε μερικές ακόμα\n"
+        + "ερωτήσεις για την ανάδειξη του νικητή!");
+        
         int equals = 1;         /* calculating the ammount of players with the same score*/
 
         for (int i = 1; i < points.length; i++) {
@@ -102,19 +105,19 @@ public class FireRound {
             long startTime = System.nanoTime();    /*calculating player's answering time*/
             do {
                 answer = sc.nextLine();
-                if (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q") {
+                if (!answer.equals("1") && !answer.equals("2") && !answer.equals("3") && !answer.equals("4") && !answer.equals("q")) {
                     System.out.println("Λάθος επιλογή. Παρακαλώ προσπαθείστε ξανά.");
                 }
-            } while (answer != "1" && answer != "2" && answer != "3" && answer != "4" && answer != "q");
+            } while (!answer.equals("1") && !answer.equals("2") && !answer.equals("3") && !answer.equals("4") && !answer.equals("q"));
             long estimatedTime = System.nanoTime() - startTime;
             times[i] = estimatedTime;
 
-            if (answer != "q") {
-                if (answer == fireAnswers[cn]) {
+            if (answer.equals("q")) {
+                if (answer.equals(fireAnswers[cn]) {
                     System.out.println("Σωστή απάντηση!");
                     points[i][1] += 100;
                 } else {
-                    System.out.printf("Λάθος απάντηση.. η σωστή απάντηση είναι: ", fireAnswers[cn]);
+                    System.out.printf("Λάθος απάντηση.. η σωστή απάντηση είναι: " + fireAnswers[cn]);
                 }
             } else {
                 System.exit(0);
