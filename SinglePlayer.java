@@ -50,7 +50,7 @@ public class SinglePlayer {
             }
         }
         int realPoints = points / QnA.length;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
-        System.out.printf("Το παιχνίδι τελείωσε, συγκέντρωσες %d πόντους!", points);
+        System.out.printf("Το παιχνίδι τελείωσε, συγκέντρωσες %d πόντους!", realPoints);
         if (realPoints < 50) {
             System.out.println("Μπορείς να τα πας καλύτερα!");
         } else if (realPoints < 80) {
@@ -58,7 +58,7 @@ public class SinglePlayer {
         } else {
             System.out.println("Μήπως είσαι από την Ελλάδα;");
         }
-        System.out.println("Η ομάδα προγραμματιστών σε ευχαριστεί που ήσουν μαζί μασ σε αυτό το εκπαιδευτικό ταξίδι.");
+        System.out.println("Η ομάδα προγραμματιστών σε ευχαριστεί που ήσουν μαζί μας σε αυτό το εκπαιδευτικό ταξίδι.");
         System.out.println("Ελπίζουμε να το απόλαυσες όσο και εμείς!");
     }
 }
