@@ -42,5 +42,8 @@ public class Welcome {
             }
         } while (DeTrivial.dif1 != '1' && DeTrivial.dif1 != '2' && DeTrivial.dif1 != '3'
                 && DeTrivial.dif1 != '4' && DeTrivial.dif1 != 'q');
+        if (DeTrivial.dif1 == 'q') {
+            System.exit(0);
+        }
     }
 }
