@@ -11,7 +11,6 @@ public class Welcome {
     public static void players() {
 
 
-        System.out.println("Εισάγετε αριθμό παικτών (μέχρι 4), ή πατήστε 'q' για να βγείτε: ");
         do {
             System.out.println("Εισάγετε αριθμό παικτών (μέχρι 4), ή πατήστε 'q' για να βγείτε: ");
             DeTrivial.numb1 = input.next().charAt(0);     /* The player inputs the number of players */
@@ -35,7 +34,7 @@ public class Welcome {
     public static void level() {
         do {
             System.out.print("Επιλέξτε επίπεδο δυσκολίας, ή πατήστε 'q' για να βγείτε: ");
-            System.out.print("1. Εύκολο, 2. Μέτριο, 3. Δύσκολο, 4. Μίξη");
+            System.out.println("1. Εύκολο, 2. Μέτριο, 3. Δύσκολο, 4. Μίξη");
             DeTrivial.dif1 = input.next().charAt(0);      /* The player inputs the difficulty level */
             if (DeTrivial.dif1 != '1' && DeTrivial.dif1 != '2' && DeTrivial.dif1 != '3'
                     && DeTrivial.dif1 != '4' && DeTrivial.dif1 != 'q') {
