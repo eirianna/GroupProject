@@ -99,7 +99,7 @@ public class FireRound {
             } while (controlArray[cn] == cn);
 
             controlArray[cn] = cn;
-            System.out.println("Παίκτης: " + points[i][0]);
+            System.out.println("Παίκτης: " + (points[i][0] + 1));
             System.out.println(fireQuestions[cn]);
             String answer;
 
@@ -113,7 +113,7 @@ public class FireRound {
             long estimatedTime = System.nanoTime() - startTime;
             times[i] = estimatedTime;
 
-            if (answer.equals("q")) {
+            if (!answer.equals("q")) {
                 if (answer.equals(fireAnswers[cn])) {
                     System.out.println("Σωστή απάντηση!");
                     points[i][1] += 100;
