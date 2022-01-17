@@ -113,7 +113,7 @@ public class FireRound {
             times[i] = estimatedTime;
 
             if (answer.equals("q")) {
-                if (answer.equals(fireAnswers[cn]) {
+                if (answer.equals(fireAnswers[cn])) {
                     System.out.println("Σωστή απάντηση!");
                     points[i][1] += 100;
                 } else {
