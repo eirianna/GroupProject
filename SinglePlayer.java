@@ -52,7 +52,7 @@ public class SinglePlayer {
             }
         }
         int realPoints = points / QnA.length;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
-        System.out.println("Το παιχνίδι τελείωσε, συγκέντρωσες %d πόντους!" + realPoints);
+        System.out.println("Το παιχνίδι τελείωσε, συγκέντρωσες " + realPoints + " πόντους!");
         if (realPoints < 50) {
             System.out.println("Μπορείς να τα πας καλύτερα!");
         } else if (realPoints < 80) {
