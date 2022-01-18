@@ -3,8 +3,8 @@ import java.util.Random;
 
 public class FireRound {
 
-    static String [] fireQuestions = new String [8];
-    static String [] fireAnswers = new String [8];
+    protected static String [] fireQuestions = new String [8];
+    protected static String [] fireAnswers = new String [8];
 
     public static void setFireQuestions() {
 
