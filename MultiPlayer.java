@@ -59,14 +59,16 @@ public class MultiPlayer {
         }
         // sorting array points in descending order
         for (int i = 0; i < (numb-1); i++) {
-                if (points[i][1] < points[i+1][1]) {
+            for (int k = 0; k < numb-i-1; k++) {
+                if (points[k][1] < points[k + 1][1]) {
                     for (int j = 0; j < 2; j++) {
-                            int temp = points[i][j];
-                            points[i][j] = points[i+1][j];
-                            points[i+1][j] = temp;
+                        int temp = points[k][j];
+                        points[k][j] = points[k + 1][j];
+                        points[k + 1][j] = temp;
                     }
-                    
-               }
+
+                }
+            }
         }
 
         if (points[0][1] == points[1][1]) {
