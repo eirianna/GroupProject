@@ -118,7 +118,7 @@ public class FireRound {
                     System.out.println("Σωστή απάντηση!");
                     points[i][1] += 100;
                 } else {
-                    System.out.printf("Λάθος απάντηση.. η σωστή απάντηση είναι: " + fireAnswers[cn]);
+                    System.out.println("Λάθος απάντηση.. η σωστή απάντηση είναι: " + fireAnswers[cn]);
                 }
             } else {
                 System.exit(0);
