@@ -1,3 +1,5 @@
+package gr.aueb.dmst.dds.exercise;
+
 import java.util.Scanner;
 
 public class SinglePlayer {
