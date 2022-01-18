@@ -56,7 +56,7 @@ public class SinglePlayer {
         } else if (realPoints < 80) {
             System.out.println("Έχεις κάνει την έρευνα σου!!!");
         } else {
-            System.out.println("Μήπως είσαι από την Ελλάδα;");
+            System.out.println("Οι γνώσεις σου είναι αξιοθαύμαστες!");
         }
         System.out.println("Η ομάδα προγραμματιστών σε ευχαριστεί που ήσουν μαζί μας σε αυτό το εκπαιδευτικό ταξίδι.");
         System.out.println("Ελπίζουμε να το απόλαυσες όσο και εμείς!");
