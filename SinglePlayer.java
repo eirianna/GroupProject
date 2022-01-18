@@ -48,11 +48,11 @@ public class SinglePlayer {
                 points = points + 100;
             } else {
                 System.out.println("ΛΆΘΟΣ ΑΠΆΝΤΗΣΗ...");
-                /*System.out.printf("Η σωστή απάντηση είναι: ", QnA[i][1]);*/
+                System.out.println("Η σωστή απάντηση είναι: " + QnA[i][1]);
             }
         }
         int realPoints = points / QnA.length;     /* realPoints = the real value of total points based on the number of the questions the player has been asked*/
-        System.out.printf("Το παιχνίδι τελείωσε, συγκέντρωσες %d πόντους!", realPoints);
+        System.out.println("Το παιχνίδι τελείωσε, συγκέντρωσες %d πόντους!" + realPoints);
         if (realPoints < 50) {
             System.out.println("Μπορείς να τα πας καλύτερα!");
         } else if (realPoints < 80) {
